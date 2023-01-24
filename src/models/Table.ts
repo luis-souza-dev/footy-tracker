@@ -1,4 +1,4 @@
-export interface Table {
+export interface TableItem {
     clubName: string;
     clubImage: string;
     points: number;
