@@ -1,6 +1,6 @@
 import { Competition, CompetitionInput } from "./Competition.interface";
 import { TableItem } from "../Table";
-import axiosInstance from "../../services/axios";
+import axiosInstance, { controller } from "../../services/axios";
 import { GamePlanDTO, TableDTO } from "../../services/competition/Competition.dto";
 
 export class CompetitionObject implements Competition {

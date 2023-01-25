@@ -1,4 +1,5 @@
 export interface Match {
+    id: number;
     matchTime: string;
     homeClubName: string;
     homeClubId: number;
