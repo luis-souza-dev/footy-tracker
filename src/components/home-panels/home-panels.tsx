@@ -18,22 +18,24 @@ export function HomePanel ({ type, data }: HomePanelComponent) {
     switch (type) {
         case 'matches':
             component = <Matches data={data as Match[]} />;
-            additionalClass = ' rounded';
+            additionalClass = 'basis-2/6';
         break;
         
         case 'table':
             component = <Table data={data as TableItem[]} />;
-            additionalClass = ' rounded-tl';
+            additionalClass = 'basis-2/5';
         break;
         default:
             component = <News data={data as []} />;
-            additionalClass = ' rounded-tr';
+            additionalClass = 'basis-1/3';
 
         break;
     }
   return (
-    <div className={'max-h-[600px] bg-gray-200 w-[30%] overflow-scroll p-4' + additionalClass}>
-      {component}
+    <div className={'p-4 ' + additionalClass}>
+      <div className='scrollbar-none scrollbar'>
+        {component}
+      </div>
     </div>
   );
 }

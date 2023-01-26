@@ -46,12 +46,12 @@ export default function Home() {
     };
     return (
         <HomeContext.Provider value={{ ...state, setSelectedCompetition }}>
-            <section className='min-h-full flex flex-col gap-y-20'>
+            <section className='min-h-full flex flex-col gap-y-10'>
                 <CompetitionBanner competitions={competitions}/>
-                <div className='grow-1 h-[570px] flex justify-between'>
-                    <HomePanel type='news' data={[]} />
+                <div className='grow-1 w-[80%] mx-auto flex gap-x-1 border rounded shadow-lg'>
                     <HomePanel type='matches' data={state.competitionMatches} />
                     <HomePanel type='table' data={state.competitionTable} />
+                    <HomePanel type='news' data={[]} />
                 </div>
             </section>
         </HomeContext.Provider>
